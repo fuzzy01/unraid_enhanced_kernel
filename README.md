@@ -7,9 +7,9 @@ The core idea behind this project was to enhance the unRAID kernel by integratin
 Key features:
 - Unraid Compatibility: Maintains core functionalities and compatibility with unRAID.
 - Enhanced Hardware Support: By aligning closer with Arch Linux's kernel configuration, this kernel extends its compatibility with a wider array of hardware features.
-- Modern Features: Incorporates the latest kernel features and optimizations from Arch Linux, ensuring users benefit from recent advancements.
+- Modern Features: Incorporates the latest kernel features and optimizations from Arch Linux, ensuring users benefit from recent kernel development advancements.
 - Security and Performance: Prioritizes security and performance enhancements, ensuring that the kernel is secure and efficient for various use case. 
-- Kernel hardening is enabled to minimize the risk of data corruption.
+- Hardening: Kernel hardening is enabled to minimize the risk of data corruption.
 
 Notes:
 - This build has SR-IOV (hardware virtualisation) support for i915 adapters. You can enable it with the kernel command line parameters:
@@ -20,7 +20,7 @@ i915.enable_guc=3 i915.max_vfs=7
 ```
 echo 2 > /sys/devices/pci0000:00/0000:00:02.0/sriov_numvfs
 ```
-  You can see the addition adapters with the lspci command.
+  You can see the additional adapters with the lspci command.
 -  This build includes the r8125 (for 2.5 GbE RTL8125, RTL8126 chips) and r8168 (for 1 GbE RTL8168, RTL8411 chips) drivers from the Realtek site. You can enable them with disabling the built-in kernel driver:
 ```
 echo "blacklist r8169" > /boot/config/modprobe.d/r8169.conf
